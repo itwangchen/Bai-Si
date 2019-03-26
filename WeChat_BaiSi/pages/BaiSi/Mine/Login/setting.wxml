@@ -1,0 +1,5 @@
+<!--pages/BaiSi/Mine/Login/loginout.wxml-->
+
+<view class='loginoutStyle' catchtap='loginoutClick'>
+  <text class='loginoutTextStyle'>退出</text>
+</view>

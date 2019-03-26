@@ -1,0 +1,26 @@
+<!--pages/BaiSi/Attention/attention.wxml-->
+
+<view style='display:flex;flex-direction:row;width:100%;height=100%'>  
+
+  <scroll-view scroll-y class='leftStyle'>
+    <block wx:for="{{typeNames}}">
+      <view class='leftUIStyle {{item.selected ? "leftUISelectedStyle" : ""}}' bindtap='typeClick' data-index='{{item.index}}'>
+        <view class='lineStyle' wx:if="{{item.selected}}"></view>
+        <text class='{{item.selected ? "textSelectedStyle" : "textNormalStyle"}}'>{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <scroll-view scroll-y class='rightStyle' style='height:{{typeHeight}};'>
+    <block wx:for="{{typeLists}}">
+      <view class='rightUIStyle'>
+        <image class='rightImageStyle' src='{{item.header}}' mode='aspectFit'></image>
+        <text class='rightTitleStyle'>{{item.screen_name}}</text>
+        <text class='rightNumberStyle'>{{item.fans_count}}人关注</text>
+        <button class='rightBtnStyle'>+关注</button>
+      </view>
+    </block>
+  </scroll-view>
+
+</view>  
+

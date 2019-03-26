@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/BaiSi/Essence/essence",
+    "pages/BaiSi/Essence/Detail/detail",
+    "pages/BaiSi/Follow/follow",
+    "pages/BaiSi/Attention/attention",
+    "pages/BaiSi/Mine/mine",
+    "pages/BaiSi/Mine/Login/login",
+    "pages/BaiSi/Mine/Login/register",
+    "pages/BaiSi/Mine/Login/forgetPassword",
+    "pages/BaiSi/Mine/Login/setting",
+
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#DCDCDC",
+    "navigationBarBackgroundColor": "#474747",
+    "navigationBarTitleText": "百思",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#474747",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/BaiSi/Essence/essence",
+        "text": "精华",
+        "iconPath": "images/BaiSi/tabBar/essence_normal.png",
+        "selectedIconPath": "images/BaiSi/tabBar/essence_selected.png"
+      },
+      {
+        "pagePath": "pages/BaiSi/Attention/attention",
+        "text": "推荐关注",
+        "iconPath": "images/BaiSi/tabBar/follow_normal.png",
+        "selectedIconPath": "images/BaiSi/tabBar/follow_selected.png"
+      },
+      {
+        "pagePath": "pages/BaiSi/Follow/follow",
+        "text": "关注",
+        "iconPath": "images/BaiSi/tabBar/attention_normal.png",
+        "selectedIconPath": "images/BaiSi/tabBar/attention_selected.png"
+      },
+      {
+        "pagePath": "pages/BaiSi/Mine/mine",
+        "text": "我的",
+        "iconPath": "images/BaiSi/tabBar/mine_normal.png",
+        "selectedIconPath": "images/BaiSi/tabBar/mine_selected.png"
+      }
+    ]
+  }
+}

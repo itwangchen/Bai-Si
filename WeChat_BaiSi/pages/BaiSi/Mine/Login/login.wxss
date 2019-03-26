@@ -1,0 +1,66 @@
+/* pages/BaiSi/Mine/Login/login.wxss */
+
+.inputStyle{
+  margin: 60px 30px 10px 30px;
+
+  border-radius: 5px;
+
+  background-color: white;
+}
+.inputStyle .nameStyle{
+  width: 90%;
+  height: 40px;
+
+  font-size: 13px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.inputStyle .lineStyle{
+  background-color: lightgray;
+  width: 100%;
+  height: 1rpx;
+}
+.inputStyle .passwordStyle{
+  width: 90%;
+  height: 40px;
+
+  font-size: 13px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.loginStyle{
+  margin: 10px 30px 10px 30px;
+
+  height: 40px;
+
+  background-color: red;
+
+  border-radius: 5px;
+
+  color: white;
+}
+.loginStyle:active{
+  background-color: Brown;
+}
+
+.typeStyle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.typeStyle .registerStyle{
+  color: DarkGray;
+  font-size: 13px;
+  text-align: left;
+}
+.typeStyle .forgetPasswordStyle{
+  color: DarkGray;
+  font-size: 13px;
+  text-align: right;
+}

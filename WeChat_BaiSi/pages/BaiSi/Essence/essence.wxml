@@ -1,0 +1,61 @@
+<!--pages/BaiSi/Essence/essence.wxml-->
+
+<import src="../Essence/Template/template.wxml" />
+
+<view class='topStyle'>
+  <block wx:for="{{titles}}">
+    <view class='topUIStyle' bindtap='typeClick' data-id='{{item.id}}' data-index='{{item.index}}'>
+        <text class='{{item.selected ? "titleSelectedStyle" : "titleStyle"}}'>{{item.title}}</text> 
+        <view class='{{item.selected ? "lineStyle" : ""}}'></view>   
+    </view>
+  </block>
+</view>
+
+<swiper class='bottomStyle' bindchange='changeClick' duration='300' current='{{titleIndex}}' style='height:{{swiperHeight}}px;'>
+
+  <!-- 全部  -->
+  <swiper-item>
+    <scroll-view class='scrollStyle' scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{allValues}}">
+        <template is="essenceCell" data="{{item}}"></template>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 视频  -->
+  <swiper-item>
+    <scroll-view class='scrollStyle' scroll-y bindscrolltolower="loadMoreData">
+      <block wx:for="{{videoValues}}">
+        <template is="essenceCell" data="{{item}}"></template>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 图片  -->
+  <swiper-item>
+    <scroll-view class='scrollStyle' scroll-y bindscrolltolower="loadMoreData">
+      <block wx:for="{{imageValues}}">
+        <template is="essenceCell" data="{{item}}"></template>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 段子  -->
+  <swiper-item>
+    <scroll-view class='scrollStyle' scroll-y bindscrolltolower="loadMoreData">
+      <block wx:for="{{textValues}}">
+        <template is="essenceCell" data="{{item}}"></template>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 声音  -->
+  <swiper-item>
+    <scroll-view class='scrollStyle' scroll-y bindscrolltolower="loadMoreData">
+      <block wx:for="{{audioValues}}">
+        <template is="essenceCell" data="{{item}}"></template>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>

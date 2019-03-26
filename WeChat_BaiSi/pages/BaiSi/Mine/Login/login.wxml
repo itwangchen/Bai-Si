@@ -1,0 +1,14 @@
+<!--pages/BaiSi/Mine/Login/login.wxml-->
+
+<view class='inputStyle'>
+  <input class='nameStyle' placeholder='请输入用户名' maxlength='30' bindinput='nameInput'></input>
+  <view class='lineStyle'></view>
+  <input class='passwordStyle' password='true' placeholder='请输入密码' maxlength='20' bindinput='passwordInput'></input>
+</view>
+
+<button class='loginStyle' bindtap='loginClick'>登录</button>
+
+<view class='typeStyle'>
+  <view class='registerStyle' catchtap='registerClick'>立即注册</view>
+  <view class='forgetPasswordStyle' catchtap='forgetPasswordClick'>忘记密码</view>
+</view>

@@ -1,0 +1,83 @@
+/* pages/BaiSi/Mine/mine.wxss */
+
+.loginStyle{
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 10px;
+  background-color: #ffffff;
+
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.loginStyle .loginImageStyle{
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid lightgray;
+  border-radius: 50%;
+
+  margin: 10px;
+}
+.loginStyle .loginTextStyle{
+  height: 40px;
+  line-height: 40px;
+
+  margin: 10px;
+}
+
+
+.downloadStyle{
+  margin-top: 10px;
+  background-color: #ffffff;
+
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.downloadStyle .downloadTextStyle{
+  height: 40px;
+  line-height: 40px;
+
+  margin: 10px;
+}
+
+.typeStyle{
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  background-color: white;
+  
+  margin-top: 10px;
+}
+.typeItemStyle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 24.36%;
+
+  border-left: 1rpx solid lightgray;
+  border-bottom: 1rpx solid lightgray;
+  padding: 1rpx; 
+}
+.typeItemStyle:active{
+  background-color: lightgray;
+}
+.typeItemStyle .typeImageStyle{
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  margin: 10px;
+}
+.typeItemStyle .typeTextStyle{
+  height: 30px;
+
+  font-size: 13px;
+  text-align: center;
+
+  margin: 0px 10px 10px 10px;
+}

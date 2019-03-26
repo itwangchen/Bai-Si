@@ -1,0 +1,19 @@
+<!--pages/BaiSi/Mine/mine.wxml-->
+
+<view class='loginStyle' catchtap='loginClick'>
+  <image class='loginImageStyle' src="{{userImage}}" mode='aspectFit'></image>
+  <text class='loginTextStyle'>{{userName}}</text>
+</view>
+
+<view class='downloadStyle' catchtap='downloadClick'>
+  <text class='downloadTextStyle'>离线下载</text>
+</view>
+
+<view class='typeStyle'>
+  <block wx:for="{{typelists}}">
+    <view class='typeItemStyle' catchtap='typeClick' data-id='{{index}}'>
+      <image class='typeImageStyle' src='{{item.image}}' mode='aspectFit'></image>
+      <text class='typeTextStyle'>{{item.name}}</text>
+    </view>
+  </block>
+</view>

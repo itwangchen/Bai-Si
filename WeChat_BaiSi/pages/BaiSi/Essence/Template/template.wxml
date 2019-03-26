@@ -1,0 +1,90 @@
+<!--pages/BaiSi/Essence/Template/template.wxml-->
+
+<template name="essenceCell">
+  <view class='cellStyle' bindtap='detailClick' data-title='{{item.name}}' data-id='{{item.id}}'>
+
+    <!-- 上部 头像、标题、时间、更多按钮 -->
+    <view class='cellTopStyle'>
+      <!-- 头像 -->
+      <image class='topImageStyle' src='{{item.profile_image}}' mode='aspectFill'></image>
+      <!-- 标题、时间 -->
+      <view class='topTextStyle'>
+        <!-- 标题 -->
+        <text class='topTitleStyle'>{{item.name}}</text>
+        <!-- 时间 -->
+        <text class='topTimeStyle'>{{item.create_time}}</text>
+      </view>      
+      <!-- 更多按钮 -->
+      <image class='topIconStyle' src='../../../images/BaiSi/common/moreImage.png' catchtap='moreClick'></image>
+    </view>
+
+    <!-- 中间 内容：视频，或图片，或声音，或段子 -->
+    <view class='middleStyle'>
+
+      <!-- 段子 -->
+      <view class='middleItemStyle' hidden='{{item.text ? false : true}}'>
+        <text>{{item.text}}</text>
+      </view>  
+
+      <!-- 视频 -->
+      <view class='middleItemStyle' hidden='{{item.videouri ? false : true}}'>
+        <video src='{{item.videouri}}' id='{{item.id}}' catchtap='videoPlay'></video>
+      </view>      
+
+      <!-- 图片 -->
+      <view class='middleItemStyle' hidden='{{(item.image1 && (!item.videouri && !item.voiceuri)) ? false : true}}'>
+        <image src='{{item.image1}}' mode='widthFix'></image>
+      </view>      
+
+      <!-- 声音 -->
+      <view class='middleItemStyle' hidden='{{item.voiceuri ? false : true}}'>
+        <audio src='{{item.voiceuri}}' id='{{item.id}}' poster="{{item.bimageuri}}" author="{{item.screen_name}}" controls='true' catchtap='audioPlay'></audio>
+      </view>      
+
+    </view>
+    
+    <!-- 下部 赞、踩、转发、评论 -->
+    <view class='bottomBtnStyle'>
+      <!-- 赞 -->
+      <view class='bottomBtnItemStyle' catchtap='praiseClick'>
+         <image src='../../../images/BaiSi/common/praiseImage.png'></image> 
+        <text>{{item.love}}</text>
+      </view>
+
+      <!-- 踩 -->
+      <view class='bottomBtnItemStyle' catchtap='criticizeClick'>
+         <image src='../../../images/BaiSi/common/criticizeImage.png'></image> 
+        <text>{{item.hate}}</text>
+      </view>
+
+      <!-- 转发 -->
+      <view class='bottomBtnItemStyle' catchtap='shareClick'>
+         <image src='../../../images/BaiSi/common/shareImage.png'></image> 
+        <text>{{item.repost}}</text>
+      </view>
+
+      <!-- 评论 -->
+      <view class='bottomBtnItemStyle' catchtap='commentClick'>
+         <image src='../../../images/BaiSi/common/commentImage.png'></image> 
+        <text>{{item.comment}}</text>
+      </view>
+
+    </view>
+
+  </view>
+</template>
+
+
+<template name="detailCell">
+  <view class='detailCellStyle'>
+    <view class='topStyle'>
+      <image class='topImageStyle' src='{{item.user.profile_image}}' mode='aspectFill'></image>
+      <text class='topNameStyle'>{{item.user.username}}</text>
+      <text class='topPraiseTextStyle'>{{item.user.total_cmt_like_count > 0 ? item.user.total_cmt_like_count : '0'}}</text>
+       <image class='topPraiseIconStyle' src='../../../../images/BaiSi/common/praiseImage.png'></image>
+    </view>
+    
+    <text class='bottomTextStyle'>{{item.content}}</text>
+
+  </view>
+</template>

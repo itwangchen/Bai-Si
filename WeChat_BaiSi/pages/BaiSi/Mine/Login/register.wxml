@@ -1,0 +1,11 @@
+<!--pages/BaiSi/Mine/Login/register.wxml-->
+
+<view class='inputStyle'>
+  <input class='nameStyle' placeholder='请输入用户名' bindinput='nameInput'></input>
+  <view class='lineStyle'></view>
+  <input class='passwordStyle' placeholder='请输入密码' password='true' bindinput='passwordInput'></input>
+  <view class='lineStyle'></view>
+  <input class='passwordStyle' placeholder='请再次输入密码' password='true' bindinput='passwordReInput'></input>
+</view>
+
+<button class='registerStyle' bindtap='registerClick'>注册</button>

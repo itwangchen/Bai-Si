@@ -1,0 +1,107 @@
+/* pages/BaiSi/Attention/attention.wxss */
+
+.leftStyle{
+  width: 20%;
+  height: 100%;
+   position: fixed; 
+}
+.leftUIStyle{
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 44px;
+
+  border-bottom: 1rpx solid WhiteSmoke;
+  position: relative;
+}
+.leftUISelectedStyle{
+  background-color: white;
+}
+.leftUIStyle:active{
+  background-color: white;
+}
+.leftUIStyle .lineStyle{
+  width: 6rpx;
+  height: 100%;
+
+  background-color: red;
+}
+.leftUIStyle .textNormalStyle{
+  width: 90%;
+
+  line-height: 44px;
+  padding-left: 10px;
+  font-size: 13px;
+  color: gray;
+
+  position: absolute;
+}
+.leftUIStyle .textSelectedStyle{
+  width: 90%;
+
+  line-height: 44px;
+  padding-left: 10px;
+  font-size: 13px;
+  color: red;
+
+  position: absolute;
+}
+
+.rightStyle{
+  width: 80%;
+  height: 100%;
+  background-color: white;
+
+  margin-left: 20%;
+  float: right; 
+}
+.rightUIStyle{
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  border-bottom: 1rpx solid WhiteSmoke;
+  position: relative;
+}
+.rightUIStyle .rightImageStyle{
+  width: 40px;
+  height: 40px;
+
+  margin: 10px;
+}
+.rightUIStyle .rightTitleStyle{
+  height: 20px;
+
+  margin-top: 10px;
+
+  font-size: 13px;
+  color: black;  
+}
+.rightUIStyle .rightNumberStyle{
+  height: 20px;
+
+  position: absolute;
+  left: 60px;
+  bottom: 10px;
+
+  font-size: 11px;
+  color: gray;
+}
+.rightUIStyle .rightBtnStyle{
+  width: 60px;
+  height: 30px;
+
+  font-size: 11px;
+  color: red;
+
+  border: 1rpx solid WhiteSmoke;
+
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.rightBtnStyle:active{
+  background-color: AliceBlue;
+}

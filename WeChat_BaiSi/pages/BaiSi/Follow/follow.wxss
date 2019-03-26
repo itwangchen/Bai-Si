@@ -1,0 +1,45 @@
+/* pages/BaiSi/Follow/follow.wxss */
+
+.loginStyle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+}
+.loginStyle text{
+  height: 30px;
+
+  margin: 10px;
+  
+  color: black;
+  font-size: 13px;
+  text-align: center;
+}
+
+.unloginStyle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+}
+.unloginStyle text{
+  height: 30px;
+
+  color: Gray;
+  font-size: 13px;
+  text-align: center;
+}
+.unloginStyle button{
+  background-color: white;
+
+  margin: 10px;
+  color: red;
+  font-size: 13px;
+}
+.unloginStyle button:active{
+  background-color: WhiteSmoke;
+}

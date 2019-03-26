@@ -1,0 +1,21 @@
+/* pages/BaiSi/Mine/Login/loginout.wxss */
+
+.loginoutStyle{
+  margin: 10px 0px 10px 0px;
+
+  background-color: white;
+
+  border-top: 1rpx solid lightgray;
+  border-bottom: 1rpx solid lightgray;
+}
+.loginoutStyle .loginoutTextStyle{
+
+  height: 40px;
+  line-height: 40px;
+  
+  color: black;
+  font-size: 13px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}

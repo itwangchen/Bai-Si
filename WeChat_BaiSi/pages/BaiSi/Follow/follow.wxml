@@ -1,0 +1,13 @@
+<!--pages/BaiSi/Follow/follow.wxml-->
+
+<view class='loginStyle' wx:if="{{islogin}}">
+  <icon type='info' size='60' color='red'></icon>
+  <text>还没有关注哦</text>
+</view>
+
+<view class='unloginStyle' wx:else>
+  <text>快快登录吧，关注百思in最牛的人</text>
+  <text>好友动态让你过把瘾儿</text>
+  <text>欧耶</text>
+  <button bindtap='loginClick'>立即登录</button>
+</view>
