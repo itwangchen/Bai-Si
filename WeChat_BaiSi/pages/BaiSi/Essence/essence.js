@@ -17,8 +17,8 @@ Page({
       { "title": "图片", "selected": false, "id": typeIdImage, "index": 2},
       { "title": "段子", "selected": false, "id": typeIdText, "index": 3},
       { "title": "声音", "selected": false, "id": typeIdAudio, "index": 4}],
-    titleIndex:0,
-
+    titleIndex:0,//当前选中类别
+    // 类别数据
     allValues:[],
     videoValues:[],
     imageValues:[],
@@ -44,6 +44,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //默认加载第一类别
     let id = this.data.titles[0].id;
     this.loadData(id)
   },
@@ -107,26 +108,26 @@ Page({
   
   }, 
 
-  // 绑定事件
+  // 类型点击事件
   typeClick: function(even) {
     this.stopVideoAndAudio()
-
     let index = even.currentTarget.dataset.index;
-    if (index != this.data.titleIndex) {
+    if (index != this.data.titleIndex) {//判断当前点击类型是否已经选中
       var listTmp = this.data.titles;
       listTmp[index].selected = true;
-      listTmp[this.data.titleIndex].selected = false;
+      listTmp[this.data.titleIndex].selected = false;//更改选中参数
 
+      //重新赋值标题数据以及选中类型索引
       this.setData({
         titleIndex: index,
         titles:listTmp
       })
-
+      //获取id 
       let id = even.currentTarget.dataset.id;
       this.loadData(id)
     }    
   },
-
+  //swiper 更改事件 
   changeClick: function(even) {
     this.stopVideoAndAudio()
 
@@ -237,7 +238,7 @@ Page({
       }
     })
   },
-
+  // 类别数据获取
   loadData: function(typeId) {
     // 已经有数据时，则不再请求数据
     if (typeId == typeIdAll) {

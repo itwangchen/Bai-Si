@@ -1,5 +1,5 @@
 <!--pages/BaiSi/Essence/Detail/detail.wxml-->
-
+<!-- 评论详情 -->
 <import src="../Template/template.wxml" />
 
 <scroll-view class='scrollStyle' scryll-y>

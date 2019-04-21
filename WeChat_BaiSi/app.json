@@ -9,7 +9,6 @@
     "pages/BaiSi/Mine/Login/register",
     "pages/BaiSi/Mine/Login/forgetPassword",
     "pages/BaiSi/Mine/Login/setting",
-
     "pages/index/index",
     "pages/logs/logs"
   ],

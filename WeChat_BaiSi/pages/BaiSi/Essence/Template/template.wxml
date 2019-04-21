@@ -74,7 +74,7 @@
   </view>
 </template>
 
-
+<!-- 评论单个模板 -->
 <template name="detailCell">
   <view class='detailCellStyle'>
     <view class='topStyle'>
@@ -82,9 +82,7 @@
       <text class='topNameStyle'>{{item.user.username}}</text>
       <text class='topPraiseTextStyle'>{{item.user.total_cmt_like_count > 0 ? item.user.total_cmt_like_count : '0'}}</text>
        <image class='topPraiseIconStyle' src='../../../../images/BaiSi/common/praiseImage.png'></image>
-    </view>
-    
+    </view>    
     <text class='bottomTextStyle'>{{item.content}}</text>
-
   </view>
 </template>
